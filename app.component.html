@@ -1,0 +1,122 @@
+
+
+  
+<div class="container">
+  <div class="row">
+    <div class="col-md-12  panel panel-default" style="box-shadow: 1px 1px 2px 2px green;margin-top: 10px "   >
+      <form class="col-md-12 form-group" #frm="ngForm" (ngSubmit)="formDetails(frm)">
+        <fieldset>
+          <legend>Ship From Details:</legend>
+          <div class= "col-md-4" class="well">
+            <label>Country:</label>
+            <input type="text" name="fromcountry" id="fromcountry" class="form-control" #fromcountry="ngModel" ngModel required>
+          </div>
+          <div class= "col-md-4" class="well">
+            <label>City:</label>
+            <input type="text" name="fromcity" id="fromcity" class="form-control" #fromcity="ngModel" ngModel required>
+          </div>
+          <div class= "col-md-4" class="well">
+            <label>Postal Code:</label>
+            <input type="text" name="frompcode" id="frompcode" class="form-control" #frompcode="ngModel" ngModel required>
+          </div><hr>
+        </fieldset><br>
+        <fieldset>
+          <legend>Ship To Details:</legend>
+          <div class= "col-md-4" class="well">
+            <label>Country:</label>
+            <input type="text" name="tocountry" id="tocountry" class="form-control" #tocountry="ngModel" ngModel required>
+          </div>
+          <div class= "col-md-4" class="well">
+            <label>City:</label>
+            <input type="text" name="tocity" id="tocity" class="form-control" #tocity="ngModel" ngModel required>
+          </div>
+          <div class= "col-md-4" class="well">
+            <label>Postal Code:</label>
+            <input type="text" name="topcode" id="topcode" class="form-control" #topcode="ngModel" ngModel required>
+          </div>
+        </fieldset><br>
+        <fieldset>
+          <legend>Package Details:</legend>
+          <div class= "col-md-4" class="well">
+            <label>Number Of Package:</label>
+            <input type="text" name="NoOfPackage" id="NoOfPackage" class="form-control " #NoOfPackage="ngModel" ngModel required>
+          </div>
+          <div class= "col-md-4" class="well">
+            <label>Weight Of Package:</label>
+            <input type="text" name="WeightOfPackage" id="WeightOfPackage" class="form-control" #WeightOfPackage="ngModel" ngModel required>
+          </div>
+        </fieldset><br>
+        <div class= "col-md-12" style="margin-bottom: 10px">
+          <div class= "col-md-4" class="well">
+            <label  style="margin-right: 10px">Will you need pickup and dropoff?</label><br>
+            <input type="radio" name="radio" id="btnSelcect" value="Yes" #radio="ngModel" ngModel required> <b  style="margin-right: 10px">Yes</b>
+            <input type="radio" name="radio" id="btnSelcect" value="No" #radio="ngModel" ngModel required> <b> No </b>
+          </div>
+        
+            <div class= "col-md-4" class="well">
+              <label >Please choose a ship date</label>
+              <input type='date'name="shipDate" class="form-control" #shipDate="ngModel" ngModel required>
+            </div>
+            <div class= "col-md-4" class="well">
+              <label >Please choose a time</label>
+              <input type='time' name="shipTime" class="form-control" id="shipTime" #shipTime="ngModel" ngModel required>
+            </div>
+            <div class= "col-md-4" class="well">
+              <label >Please choose the package content:</label>
+              <select class="form-control" name="packageContent" id="packageContent" #packageContent="ngModel" ngModel required>
+                <option>select</option>
+                <option value="Documents">Documents</option>
+                <option value="Products">Products/Commodities</option>
+              </select>
+            </div>
+            <div class= "col-md-4" class="well">
+              <label >Please choose the shipment purpose: </label>
+              <select class="form-control" name="shipPurpose" id="shipPurpose" #shipPurpose="ngModel" ngModel required>
+                <option>select</option>
+                <option value="Personal">Personal</option>
+                <option value="Commercial">Commercial</option>
+              </select>
+            </div>
+            <div class= "col-md-4" class="well">
+              <label >What is the dimension of the package? (ex : 10*10cm)</label>
+              <input type='text' class="form-control" name="shipSize" id="shipSize" #shipSize="ngModel" ngModel required>
+            </div>
+            <div class= "col-md-4" class="well">
+              <label >What is the total invoice value in INR?</label>
+              <input type='text' class="form-control" name="invoiceValue" id="invoiceValue" #invoiceValue="ngModel" ngModel required>
+            </div>
+            <div class= "col-md-4" class="well">
+            <label  style="margin-right: 10px">Would you like to insure your package?</label><br>
+            <input type="radio" name="radio2"  value="Yes" #radio2="ngModel" ngModel required> <b  style="margin-right: 10px">Yes</b>
+            <input type="radio" name="radio2" value="No" #radio2="ngModel" ngModel required> <b> No </b>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="frm.invalid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div style="margin-left:60px">
+  <p>{{userDetails.fromcountry}}</p>
+  <p>{{userDetails.fromcity}}</p>
+  <p>{{userDetails.frompcode}}</p>
+  <p>{{userDetails.tocountry}}</p>
+  <p>{{userDetails.tocity}}</p>
+  <p>{{userDetails.topcode}}</p>
+  <p>{{userDetails.NoOfPackage}}</p>
+  <p>{{userDetails.WeightOfPackage}}</p>
+  <p>{{userDetails.radio}}</p>
+  <p>{{userDetails.shipDate}}</p>
+  <p>{{userDetails.shipTime}}</p>
+  <p>{{userDetails.packageContent}}</p>
+  <p>{{userDetails.shipPurpose}}</p>
+  <p>{{userDetails.shipSize}}</p>
+  <p>{{userDetails.invoiceValue}}</p>
+  <p>{{userDetails.radio2}}</p>
+
+
+</div>

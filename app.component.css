@@ -1,0 +1,12 @@
+.demo{
+
+    color: orange;
+width: 520px;
+position: relative;
+text-align: center;
+}
+.demo span{
+    padding: 10px;
+    background-color: lightblue;
+
+}
